@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FlipWords } from "@/app/components/ui/flip-words";
 import {
     motion,
@@ -7,25 +7,37 @@ import {
     useTransform,
     useSpring,
     MotionValue,
-} from "motion/react";
+} from "framer-motion";
 
 export const HeroParallax = ({
-    products,
+    projects,
 }: {
-    products: {
+    projects: {
         title: string;
         link: string;
         thumbnail: string;
     }[];
 }) => {
-    const firstRow = products.slice(0, 5);
-    const secondRow = products.slice(5, 10);
-    const thirdRow = products.slice(10, 15);
+    const firstRow = projects.slice(0, 5);
+    const secondRow = projects.slice(5, 10);
+    const thirdRow = projects.slice(10, 15);
     const ref = React.useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start start", "end start"],
     });
+
+    const [showTitle, setShowTitle] = useState(false);
+
+    useEffect(() => {
+        return scrollYProgress.on("change", (v) => {
+            if (v > 0.02) {
+                setShowTitle(true);
+            } else {
+                setShowTitle(false);
+            }
+        });
+    }, [scrollYProgress]);
 
     const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
@@ -53,12 +65,14 @@ export const HeroParallax = ({
         useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
         springConfig
     );
+
     return (
         <div
             ref={ref}
-            className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+            className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
         >
             <Header />
+
             <motion.div
                 style={{
                     rotateX,
@@ -66,8 +80,19 @@ export const HeroParallax = ({
                     translateY,
                     opacity,
                 }}
-                className=""
+                className="flex flex-col items-center"
             >
+                {/* Judul My Projects sekarang tepat di atas images */}
+                <motion.h2
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: showTitle ? 1 : 0, y: showTitle ? 0 : -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-center text-4xl md:text-6xl font-bold dark:text-white mb-20"
+                >
+                    My Projects
+                </motion.h2>
+
+
                 <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
                     {firstRow.map((product) => (
                         <ProductCard
@@ -77,7 +102,7 @@ export const HeroParallax = ({
                         />
                     ))}
                 </motion.div>
-                <motion.div className="flex flex-row  mb-20 space-x-20 ">
+                <motion.div className="flex flex-row mb-20 space-x-20">
                     {secondRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -116,9 +141,7 @@ export const Header = () => {
             </h2>
 
             <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200 text-justify">
-                We build beautiful products with the latest technologies and frameworks.
-                We are a team of passionate developers and designers that love to build
-                amazing products.
+                I am a digital solutions developer with expertise in web and mobile applications, focused on creating responsive designs and seamless user experiences across multiple platforms.
             </p>
         </div>
     );

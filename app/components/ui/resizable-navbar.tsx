@@ -9,6 +9,8 @@ import {
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
+import Flag from "react-flagkit";
+import { availableLanguages } from "@/app/components/lib/languages";
 
 
 interface NavbarProps {
@@ -49,6 +51,11 @@ interface MobileNavMenuProps {
   onClose: () => void;
 }
 
+interface LanguageSelectorProps {
+  selectedLanguage: string;
+  onSelectLanguage: (lang: string) => void;
+}
+
 export const Navbar = ({ children, className }: NavbarProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll({
@@ -74,9 +81,9 @@ export const Navbar = ({ children, className }: NavbarProps) => {
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
           ? React.cloneElement(
-              child as React.ReactElement<{ visible?: boolean }>,
-              { visible },
-            )
+            child as React.ReactElement<{ visible?: boolean }>,
+            { visible },
+          )
           : child,
       )}
     </motion.div>
@@ -205,7 +212,7 @@ export const MobileNavMenu = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className={cn(
-            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-white px-4 py-8 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:bg-neutral-950",
+            "absolute left-0 right-0 top-full mt-2 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-white px-4 py-8 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:bg-neutral-950",
             className,
           )}
         >
@@ -260,7 +267,7 @@ export const NavbarLogo = () => {
         className="relative z-20 flex items-center space-x-2 text-sm font-normal text-black"
       >
         <img
-          src="./asset/foto2.jpeg"
+          src="./asset/foto2.png"
           alt="logo"
           width={30}
           height={30}
@@ -270,6 +277,58 @@ export const NavbarLogo = () => {
           Muhammad Fahreza
         </span>
       </a>
+    </div>
+  );
+};
+
+export const LanguageSelector = ({
+  selectedLanguage,
+  onSelectLanguage,
+}: LanguageSelectorProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const currentLang = availableLanguages.find(
+    (lang) => lang.label === selectedLanguage
+  ) || availableLanguages[0];
+
+  return (
+    <div className="relative flex items-center">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center space-x-1 rounded-full px-2 py-1 text-sm font-medium transition hover:bg-gray-100 dark:hover:bg-neutral-800"
+      >
+        <Flag country={currentLang.code} size={20} />
+        <span className="text-xs">{currentLang.label}</span>
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            className="absolute right-0 mt-2 z-50 w-32 rounded-md bg-white shadow-lg dark:bg-neutral-800"
+          >
+            {availableLanguages.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => {
+                  onSelectLanguage(lang.label);
+                  setIsOpen(false);
+                }}
+                className={`flex w-full items-center space-x-2 px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-neutral-700 ${
+                  selectedLanguage === lang.label
+                    ? "bg-gray-200 dark:bg-neutral-700"
+                    : ""
+                }`}
+              >
+                <Flag country={lang.code} size={16} />
+                <span>{lang.label}</span>
+              </button>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
@@ -288,9 +347,9 @@ export const NavbarButton = ({
   className?: string;
   variant?: "primary" | "secondary" | "dark" | "gradient";
 } & (
-  | React.ComponentPropsWithoutRef<"a">
-  | React.ComponentPropsWithoutRef<"button">
-)) => {
+    | React.ComponentPropsWithoutRef<"a">
+    | React.ComponentPropsWithoutRef<"button">
+  )) => {
   const baseStyles =
     "px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
 
