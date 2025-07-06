@@ -167,22 +167,20 @@ export const ProductCard = ({
                 y: -20,
             }}
             key={product.title}
-            className="group/product h-96 w-[30rem] relative shrink-0"
+            className="group/product w-[30rem] h-96 relative shrink-0 bg-black rounded-lg overflow-hidden flex items-center justify-center"
         >
             <a
                 href={product.link}
-                className="block group-hover/product:shadow-2xl "
+                className="block w-full h-full"
             >
                 <img
                     src={product.thumbnail}
-                    height="600"
-                    width="600"
-                    className="object-cover object-left-top absolute h-full w-full inset-0"
+                    className="object-contain w-full h-full"
                     alt={product.title}
                 />
             </a>
-            <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-            <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
+            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover/product:opacity-80 transition-opacity duration-300 pointer-events-none"></div>
+            <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white transition-opacity duration-300">
                 {product.title}
             </h2>
         </motion.div>

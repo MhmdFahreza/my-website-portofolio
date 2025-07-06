@@ -424,7 +424,7 @@ const Content = ({ links }: { links: any[] }) => (
     </section>
 
     {/* TOOLS */}
-    <section id="tools" className="relative py-16 w-full">
+    <section id="tools" className="relative py-24 w-full">
       <AuroraBackground>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -443,7 +443,7 @@ const Content = ({ links }: { links: any[] }) => (
                 href={tool.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center p-4 bg-white/80 dark:bg-neutral-900 rounded-lg shadow hover:shadow-lg transition-all duration-300 w-40 h-40"
+                className="flex flex-col items-center justify-center p-4 bg-white/80 dark:bg-neutral-900 rounded-lg shadow hover:shadow-lg transition-all duration-300 w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40"
               >
                 {tool.icon}
                 <span className="mt-4 text-lg font-semibold text-neutral-700 dark:text-neutral-200">
@@ -461,7 +461,7 @@ const Content = ({ links }: { links: any[] }) => (
         <Boxes />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center px-4 py-16 md:py-24 text-center">
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 py-8 md:py-12 text-center">
         <h2 className="text-2xl md:text-3xl font-semibold mb-6">Let's Connect</h2>
 
         <FloatingDock
@@ -470,7 +470,7 @@ const Content = ({ links }: { links: any[] }) => (
           items={links}
         />
 
-        <div className="mt-12 text-sm text-neutral-400 space-y-1">
+        <div className="mt-8 text-sm text-neutral-400 space-y-1">
           <p>Built with <span className="font-medium text-white">Next.js</span>, <span className="font-medium text-white">Tailwind CSS</span>, and <span className="font-medium text-white">Aceternity UI</span></p>
           <p>© 2025 Muhammad Fahreza. All rights reserved.</p>
         </div>
