@@ -36,7 +36,7 @@ import {
   IconBrandPhp,
   IconBrandPython,
 } from "@tabler/icons-react";
-import { languageNav } from "./components/lib/languages";
+import { languageNav, languageAbout, languageToolsTitle, languageFooter, languageExperience } from "./components/lib/languages";
 
 export const projects = [
   {
@@ -101,137 +101,146 @@ export const projects = [
   },
 ];
 
-const dataExperience = [
-  {
-    title: "2024",
-    content: (
-      <div>
-        <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-          I am a student currently participating in the Independent Study Program at Bangkit Academy, specializing in the Android Learning Path. This program allows me to improve my skills and gain hands-on experience in Android development while preparing for a professional career as an Android Developer.
-        </p>
-        <div className="grid grid-cols-2 gap-4">
-          <img
-            src="./asset/Bangkit1.png"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-          />
-          <img
-            src="./asset/Bangkit2.jpg"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-          />
-          <img
-            src="./asset/Bangkit3.png"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-          />
-          <img
-            src="./asset/Bangkit4.png"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-          />
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "2022",
-    content: (
-      <div>
-        <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-          I am currently studying at the Institut Teknologi Indoneisa
-        </p>
-        <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200" style={{ textAlign: "justify" }}>
-          I am currently studying at the Indonesian Institute of Technology, focusing on Information Technology. I actively participate in various self-development programs, including career development seminars and workshops, online training outside of campus, and deepening my skills in Web and Mobile App Development, as preparation for entering the professional world.
-        </p>
-        <div className="grid grid-cols-2 gap-4">
-          <img
-            src="http://biaya-kuliah.com/wp-content/uploads/2023/04/iti.jpg"
-            alt="hero template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-          />
-          <img
-            src="https://biaya.co/wp-content/uploads/2023/02/5.jpg"
-            alt="feature template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-          />
-          <img
-            src="https://perkuliahankaryawan.com/wp-content/uploads/2022/12/Institut-Teknologi-Indonesia-e1670830617394-678x381.jpg"
-            alt="bento template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-          />
-          <img
-            src="https://biaya.co/wp-content/uploads/2023/08/Institut-Teknologi-Indonesia-ITI-678x381.jpg"
-            alt="cards template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-          />
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "2019-2022",
-    content: (
-      <div>
-        <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-          I am currently studying at SMA Negeri 12 Tangerang Selatan
-        </p>
-        <div className="mb-8">
-          <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-            Active in school organizations such as joining the MPK/OSIS organization at school, which also sparked my interest in learning about the world of programming.
+const getDataExperience = (selectedLanguage: LanguageCode) => {
+  const exp = languageExperience[selectedLanguage];
+
+  if (!exp) {
+    // Fallback ke "US" jika tidak tersedia
+    return getDataExperience("US");
+  }
+
+  const dataExperience = [
+    {
+      title: "2024",
+      content: (
+        <div>
+          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            {exp.bangkit}
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="./asset/Bangkit1.png"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="./asset/Bangkit2.jpg"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="./asset/Bangkit3.png"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="./asset/Bangkit4.png"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4">
-          <img
-            src="https://www.kemdikbud.co.id/data/wp-content/uploads/2022/11/foto-sma-di-kota-tangerang-selatan-1668863589.jpeg"
-            alt="hero template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-          />
-          <img
-            src="http://dtangsel.sch.id/wp-content/uploads/2023/02/Salah-Satu-SMA-Negeri-di-tangsel.png"
-            alt="feature template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-          />
-          <img
-            src="./asset/Buktisertifikatorganisasi.png"
-            alt="bento template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-          />
-          <img
-            src="https://i.ytimg.com/vi/7aFkHY2ea44/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgXihRMA8=&rs=AOn4CLDQbRadNmQWTMSsebsVxjRMiVFW_A"
-            alt="cards template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-          />
+      ),
+    },
+    {
+      title: "2022",
+      content: (
+        <div>
+          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            {exp.itiShort}
+          </p>
+          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200" style={{ textAlign: "justify" }}>
+            {exp.itiFull}
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="http://biaya-kuliah.com/wp-content/uploads/2023/04/iti.jpg"
+              alt="hero template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://biaya.co/wp-content/uploads/2023/02/5.jpg"
+              alt="feature template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://perkuliahankaryawan.com/wp-content/uploads/2022/12/Institut-Teknologi-Indonesia-e1670830617394-678x381.jpg"
+              alt="bento template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://biaya.co/wp-content/uploads/2023/08/Institut-Teknologi-Indonesia-ITI-678x381.jpg"
+              alt="cards template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+          </div>
         </div>
-      </div>
-    ),
-  },
-];
-
+      ),
+    },
+    {
+      title: "2019-2022",
+      content: (
+        <div>
+          <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            I {exp.smaIntro}
+          </p>
+          <div className="mb-8">
+            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              {exp.smaOrg}
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://www.kemdikbud.co.id/data/wp-content/uploads/2022/11/foto-sma-di-kota-tangerang-selatan-1668863589.jpeg"
+              alt="hero template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="http://dtangsel.sch.id/wp-content/uploads/2023/02/Salah-Satu-SMA-Negeri-di-tangsel.png"
+              alt="feature template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="./asset/Buktisertifikatorganisasi.png"
+              alt="bento template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://i.ytimg.com/vi/7aFkHY2ea44/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgXihRMA8=&rs=AOn4CLDQbRadNmQWTMSsebsVxjRMiVFW_A"
+              alt="cards template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+          </div>
+        </div>
+      ),
+    },
+  ];
+  return dataExperience;
+}
 const languageToolsCards = [
   {
     title: "Kotlin",
@@ -244,7 +253,7 @@ const languageToolsCards = [
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
-    title: "Next.js",
+    title: "Nextjs",
     icon: <IconBrandNextjs className="h-12 w-12 text-black dark:text-white" />,
     link: "https://nextjs.org",
   },
@@ -291,18 +300,20 @@ export default function Home() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>("US");
 
-  const currentNav = languageNav[selectedLanguage] || languageNav["US"]; 
-
-const navItems = [
-  { name: currentNav.home, link: "#home" },
-  { name: currentNav.about, link: "#about" },
-  { name: currentNav.experience, link: "#experience" },
-  { name: currentNav.tools, link: "#tools" },
-  {
-    name: currentNav.downloadCV,
-    link: "https://drive.google.com/uc?export=download&id=1_mM9mHA-JX31XXbh26uZ06StoFB1MDzV"
-  },
-];
+  const currentNav = languageNav[selectedLanguage] || languageNav["US"];
+  const currentAbout = languageAbout[selectedLanguage] || languageAbout["US"];
+  const currentToolsTitle = languageToolsTitle[selectedLanguage] || languageToolsTitle["US"];
+  const currentFooter = languageFooter[selectedLanguage] || languageFooter["US"];
+  const navItems = [
+    { name: currentNav.home, link: "#home" },
+    { name: currentNav.about, link: "#about" },
+    { name: currentNav.experience, link: "#experience" },
+    { name: currentNav.tools, link: "#tools" },
+    {
+      name: currentNav.downloadCV,
+      link: "https://drive.google.com/uc?export=download&id=1_mM9mHA-JX31XXbh26uZ06StoFB1MDzV"
+    },
+  ];
 
   const links = [
     {
@@ -389,7 +400,13 @@ const navItems = [
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
-      <Content links={links} selectedLanguage={selectedLanguage} />
+      <Content
+        links={links}
+        selectedLanguage={selectedLanguage}
+        currentAbout={currentAbout}
+        currentToolsTitle={currentToolsTitle}
+        currentFooter={currentFooter}
+      />
     </div>
   );
 }
@@ -397,18 +414,31 @@ const navItems = [
 const Content = ({
   links,
   selectedLanguage,
+  currentAbout,
+  currentToolsTitle,
+  currentFooter,
 }: {
   links: any[];
   selectedLanguage: string;
+  currentAbout: { title: string; description: string };
+  currentToolsTitle: string;
+  currentFooter: {
+    connect: string;
+    builtWith: string;
+    copyright: string;
+  };
 }) => (
   <div>
     {/* HOME */}
-    <section id="home" className="container mx-auto p-8 pt-24">
+    <section id="home" className="container mx-auto px-4 pt-16 pb-8 sm:pt-20 sm:pb-12 md:pt-24 md:pb-16">
       <HeroParallax projects={projects} selectedLanguage={selectedLanguage} />
     </section>
 
     {/* ABOUT */}
-    <section id="about" className="relative flex h-[40rem] w-full overflow-hidden rounded-md bg-black/[0.96] antialiased md:items-center md:justify-center">
+    <section
+      id="about"
+      className="relative flex min-h-[40rem] w-full overflow-hidden rounded-md bg-black/[0.96] antialiased md:items-center md:justify-center"
+    >
       <div
         className={cn(
           "pointer-events-none absolute inset-0 [background-size:40px_40px] select-none",
@@ -416,26 +446,26 @@ const Content = ({
         )}
       />
       <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="white" />
-      <div className="relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0">
-        <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
-          About Me
+
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-200 text-center">
+          {currentAbout.title}
         </h1>
-        <p className="mx-auto mt-4 max-w-lg text-justify font-normal text-neutral-300">
-          Hello! My name is Muhammad Fahreza, a dedicated Web and Mobile Apps Developer with a strong passion for creating meaningful digital experiences that prioritize user needs, particularly in the fields of web and mobile applications.
-          <br />
-          With an academic background in Informatics from Institut Teknologi Indonesia and hands-on experience gained during my studies, I have been involved in several projects, such as developing a financial notes application using Kotlin, creating a mobile app for a café using Flutter, and building a responsive travel blog about Komodo Island using HTML, CSS, JavaScript, and PHP, among others. I specialize in translating complex user requirements into clean and functional interfaces. I have worked across various platforms, from mobile applications to responsive websites, with a strong focus on accessibility and usability.
-          <br />
-          I believe that a great web or mobile app is not only about its appearance but also about its functionality. My approach combines empathy, research, and creativity to ensure that every product effectively serves its users while aligning with my goals as a programmer.
-          <br />
-          I am always eager to learn and grow. In the future, I plan to expand my skills further in both web and mobile application development.
+
+        <p className="mx-auto mt-6 w-full max-w-3xl text-base sm:text-lg text-justify text-neutral-300 whitespace-pre-line leading-relaxed sm:leading-loose px-2 sm:px-0">
+          {currentAbout.description}
         </p>
       </div>
     </section>
 
     {/* EXPERIENCE */}
     <section id="experience" className="relative w-full overflow-clip">
-      <Timeline data={dataExperience} />
+      <Timeline
+        data={getDataExperience(selectedLanguage as "US" | "ID" | "JP" | "KR" | "CN")}
+        language={selectedLanguage as "US" | "ID" | "JP" | "KR" | "CN"}
+      />
     </section>
+
 
     {/* TOOLS */}
     <section id="tools" className="relative py-24 w-full">
@@ -447,8 +477,9 @@ const Content = ({
           className="relative flex flex-col gap-8 items-center justify-center px-4"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-neutral-800 dark:text-neutral-200">
-            Tools & Languages
+            {currentToolsTitle}
           </h2>
+
 
           <div className="flex flex-wrap justify-center gap-4 max-w-5xl w-full">
             {languageToolsCards.map((tool, idx) => (
@@ -476,7 +507,7 @@ const Content = ({
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center px-4 py-8 md:py-12 text-center">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6">Let's Connect</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6">{currentFooter.connect}</h2>
 
         <FloatingDock
           mobileClassName="translate-y-2 md:translate-y-0 my-4"
@@ -485,8 +516,18 @@ const Content = ({
         />
 
         <div className="mt-8 text-sm text-neutral-400 space-y-1">
-          <p>Built with <span className="font-medium text-white">Next.js</span>, <span className="font-medium text-white">Tailwind CSS</span>, and <span className="font-medium text-white">Aceternity UI</span></p>
-          <p>© 2025 Muhammad Fahreza. All rights reserved.</p>
+          <p>
+            {currentFooter.builtWith}{" "}
+            <span className="font-medium text-white">Next.js</span>,{" "}
+            <span className="font-medium text-white">Tailwind CSS</span>,{" "}
+            {selectedLanguage === "US" ? "and" :
+              selectedLanguage === "ID" ? "dan" :
+                selectedLanguage === "JP" ? "および" :
+                  selectedLanguage === "KR" ? "및" :
+                    selectedLanguage === "CN" ? "和" : "and"}{" "}
+            <span className="font-medium text-white">Aceternity UI</span>
+          </p>
+          <p>{currentFooter.copyright}</p>
         </div>
       </div>
     </footer>

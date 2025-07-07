@@ -6,16 +6,23 @@ import {
   motion,
 } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import { languageTimeline } from "@/app/components/lib/languages";
 
 interface TimelineEntry {
   title: string;
   content: React.ReactNode;
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+interface TimelineProps {
+  data: TimelineEntry[];
+  language: keyof typeof languageTimeline;
+}
+
+export const Timeline = ({ data, language }: TimelineProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
+  const { title, subtitle } = languageTimeline[language] ?? languageTimeline["US"];
 
   useEffect(() => {
     if (ref.current) {
@@ -39,12 +46,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-          Experience from my journey
+          {title}
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I have been through a lot during my academic and my career in the field of web and mobile apps.
-          <br />
-          a timeline of my journey.
+        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm whitespace-pre-line">
+          {subtitle}
         </p>
       </div>
 
