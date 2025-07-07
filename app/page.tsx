@@ -339,7 +339,7 @@ export default function Home() {
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
-          <NavbarLogo />
+          <NavbarLogo selectedLanguage={selectedLanguage} />
           <NavItems items={navItems} />
           <div className="ml-auto flex items-center">
             <LanguageSelector
@@ -352,7 +352,7 @@ export default function Home() {
         {/* Mobile Navigation */}
         <MobileNav visible>
           <MobileNavHeader>
-            <NavbarLogo />
+            <NavbarLogo selectedLanguage={selectedLanguage} />
             <MobileNavToggle
               isOpen={mobileOpen}
               onClick={() => setMobileOpen(!mobileOpen)}

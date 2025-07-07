@@ -56,6 +56,10 @@ interface LanguageSelectorProps {
   onSelectLanguage: (lang: string) => void;
 }
 
+interface NavbarLogoProps {
+  selectedLanguage: string;
+}
+
 export const Navbar = ({ children, className }: NavbarProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll({
@@ -237,8 +241,12 @@ export const MobileNavToggle = ({
   );
 };
 
-export const NavbarLogo = () => {
+export const NavbarLogo = ({ selectedLanguage }: NavbarLogoProps) => {
   const [isHovered, setIsHovered] = useState(false);
+
+  const currentLang = availableLanguages.find(
+    (lang) => lang.label === selectedLanguage
+  ) || availableLanguages[0];
 
   return (
     <div
@@ -256,8 +264,8 @@ export const NavbarLogo = () => {
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
             className="absolute bottom-full left-1/2 mb-2 w-max -translate-x-1/2 rounded-md bg-black px-3 py-2 text-white shadow-lg text-center z-50"
           >
-            <div className="text-sm font-bold">Muhammad Fahreza</div>
-            <div className="text-xs font-light">Web & Mobile App Developer</div>
+            <div className="text-sm font-bold">{currentLang.name}</div>
+            <div className="text-xs font-light">{currentLang.title}</div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -274,7 +282,7 @@ export const NavbarLogo = () => {
           className="rounded-full"
         />
         <span className="font-medium text-black dark:text-white">
-          Muhammad Fahreza
+          {currentLang.name}
         </span>
       </a>
     </div>
