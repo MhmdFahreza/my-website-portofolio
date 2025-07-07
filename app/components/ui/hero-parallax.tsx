@@ -93,7 +93,7 @@ export const HeroParallax = ({
                     transition={{ duration: 0.5 }}
                     className="text-center text-4xl md:text-6xl font-bold dark:text-white mb-20"
                 >
-                    My Projects
+                    {heroContent.myProjects}
                 </motion.h2>
 
                 <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
