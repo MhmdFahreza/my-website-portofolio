@@ -95,7 +95,7 @@ export const projects = [
   },
   {
     title: "My Portofolio",
-    link: "https://gomoonbeam.com",
+    link: "https://github.com/MhmdFahreza/my-website-portofolio",
     thumbnail:
       "/asset/Projects/MyPortofolio.png",
   },
