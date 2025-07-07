@@ -380,17 +380,22 @@ export default function Home() {
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
-
-      <Content links={links} />
+      <Content links={links} selectedLanguage={selectedLanguage} />
     </div>
   );
 }
 
-const Content = ({ links }: { links: any[] }) => (
+const Content = ({
+  links,
+  selectedLanguage,
+}: {
+  links: any[];
+  selectedLanguage: string;
+}) => (
   <div>
     {/* HOME */}
     <section id="home" className="container mx-auto p-8 pt-24">
-      <HeroParallax projects={projects} />
+      <HeroParallax projects={projects} selectedLanguage={selectedLanguage} />
     </section>
 
     {/* ABOUT */}

@@ -8,15 +8,21 @@ import {
     useSpring,
     MotionValue,
 } from "framer-motion";
+import { languageHero } from "@/app/components/lib/languages";
+
+// ✅ Tambah type aman
+type LanguageCode = keyof typeof languageHero;
 
 export const HeroParallax = ({
     projects,
+    selectedLanguage,
 }: {
     projects: {
         title: string;
         link: string;
         thumbnail: string;
     }[];
+    selectedLanguage: string;
 }) => {
     const firstRow = projects.slice(0, 5);
     const secondRow = projects.slice(5, 10);
@@ -31,11 +37,7 @@ export const HeroParallax = ({
 
     useEffect(() => {
         return scrollYProgress.on("change", (v) => {
-            if (v > 0.02) {
-                setShowTitle(true);
-            } else {
-                setShowTitle(false);
-            }
+            setShowTitle(v > 0.02);
         });
     }, [scrollYProgress]);
 
@@ -66,12 +68,16 @@ export const HeroParallax = ({
         springConfig
     );
 
+    // ✅ Handle indexing dengan aman
+    const languageKey = (selectedLanguage in languageHero ? selectedLanguage : "US") as LanguageCode;
+    const heroContent = languageHero[languageKey];
+
     return (
         <div
             ref={ref}
             className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
         >
-            <Header />
+            <Header heroContent={heroContent} />
 
             <motion.div
                 style={{
@@ -82,7 +88,6 @@ export const HeroParallax = ({
                 }}
                 className="flex flex-col items-center"
             >
-                {/* Judul My Projects sekarang tepat di atas images */}
                 <motion.h2
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: showTitle ? 1 : 0, y: showTitle ? 0 : -20 }}
@@ -91,7 +96,6 @@ export const HeroParallax = ({
                 >
                     My Projects
                 </motion.h2>
-
 
                 <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
                     {firstRow.map((product) => (
@@ -125,23 +129,32 @@ export const HeroParallax = ({
     );
 };
 
-export const Header = () => {
+export const Header = ({
+    heroContent,
+}: {
+    heroContent: {
+        name: string;
+        flipWords: string[];
+        developer: string;
+        description: string;
+    };
+}) => {
     return (
         <div className="max-w-7xl mx-auto px-4 w-full">
             <h1 className="text-2xl md:text-7xl font-bold dark:text-white leading-tight">
-                Muhammad Fahreza
+                {heroContent.name}
             </h1>
             <h2 className="text-2xl md:text-5xl font-semibold dark:text-white leading-tight mt-2">
                 <FlipWords
-                    words={["Web", "Mobile"]}
+                    words={heroContent.flipWords}
                     className="mr-1"
                     duration={3000}
                 />
-                <span>Developer</span>
+                <span>{heroContent.developer}</span>
             </h2>
 
             <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200 text-justify">
-                I am a digital solutions developer with expertise in web and mobile applications, focused on creating responsive designs and seamless user experiences across multiple platforms.
+                {heroContent.description}
             </p>
         </div>
     );
@@ -160,19 +173,12 @@ export const ProductCard = ({
 }) => {
     return (
         <motion.div
-            style={{
-                x: translate,
-            }}
-            whileHover={{
-                y: -20,
-            }}
+            style={{ x: translate }}
+            whileHover={{ y: -20 }}
             key={product.title}
             className="group/product w-[30rem] h-96 relative shrink-0 bg-black rounded-lg overflow-hidden flex items-center justify-center"
         >
-            <a
-                href={product.link}
-                className="block w-full h-full"
-            >
+            <a href={product.link} className="block w-full h-full">
                 <img
                     src={product.thumbnail}
                     className="object-contain w-full h-full"
