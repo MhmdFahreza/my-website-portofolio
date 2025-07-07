@@ -43,3 +43,41 @@ export const languageHero = {
       "我是一名专注于网页和移动应用程序的数字解决方案开发人员，致力于在多个平台上创建响应式设计和无缝用户体验。",
   },
 };
+
+export const languageNav = {
+  US: {
+    home: "Home",
+    about: "About",
+    experience: "Experience",
+    tools: "Tools",
+    downloadCV: "Download CV",
+  },
+  ID: {
+    home: "Beranda",
+    about: "Tentang",
+    experience: "Pengalaman",
+    tools: "Alat",
+    downloadCV: "Unduh CV",
+  },
+  JP: {
+    home: "ホーム",
+    about: "私について",
+    experience: "経験",
+    tools: "ツール",
+    downloadCV: "履歴書をダウンロード",
+  },
+  KR: {
+    home: "홈",
+    about: "소개",
+    experience: "경력",
+    tools: "도구",
+    downloadCV: "이력서 다운로드",
+  },
+  CN: {
+    home: "首页",
+    about: "关于",
+    experience: "经验",
+    tools: "工具",
+    downloadCV: "下载简历",
+  },
+};

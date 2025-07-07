@@ -36,6 +36,7 @@ import {
   IconBrandPhp,
   IconBrandPython,
 } from "@tabler/icons-react";
+import { languageNav } from "./components/lib/languages";
 
 export const projects = [
   {
@@ -284,14 +285,24 @@ const languageToolsCards = [
   },
 ];
 
+type LanguageCode = keyof typeof languageNav;
+
 export default function Home() {
-  const navItems = [
-    { name: "Home", link: "#home" },
-    { name: "About", link: "#about" },
-    { name: "Experience", link: "#experience" },
-    { name: "Tools", link: "#tools" },
-    { name: "Download CV", link: "https://drive.google.com/uc?export=download&id=1_mM9mHA-JX31XXbh26uZ06StoFB1MDzV" },
-  ];
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>("US");
+
+  const currentNav = languageNav[selectedLanguage] || languageNav["US"]; 
+
+const navItems = [
+  { name: currentNav.home, link: "#home" },
+  { name: currentNav.about, link: "#about" },
+  { name: currentNav.experience, link: "#experience" },
+  { name: currentNav.tools, link: "#tools" },
+  {
+    name: currentNav.downloadCV,
+    link: "https://drive.google.com/uc?export=download&id=1_mM9mHA-JX31XXbh26uZ06StoFB1MDzV"
+  },
+];
 
   const links = [
     {
@@ -331,8 +342,6 @@ export default function Home() {
     },
   ];
 
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("EN");
 
   return (
     <div className="relative w-full min-h-screen">
@@ -344,7 +353,7 @@ export default function Home() {
           <div className="ml-auto flex items-center">
             <LanguageSelector
               selectedLanguage={selectedLanguage}
-              onSelectLanguage={setSelectedLanguage}
+              onSelectLanguage={(lang) => setSelectedLanguage(lang as LanguageCode)}
             />
           </div>
         </NavBody>
@@ -374,7 +383,7 @@ export default function Home() {
             <div className="mt-4 w-full flex justify-center">
               <LanguageSelector
                 selectedLanguage={selectedLanguage}
-                onSelectLanguage={setSelectedLanguage}
+                onSelectLanguage={(lang) => setSelectedLanguage(lang as LanguageCode)}
               />
             </div>
           </MobileNavMenu>

@@ -10,7 +10,6 @@ import {
 } from "framer-motion";
 import { languageHero } from "@/app/components/lib/languages";
 
-// ✅ Tambah type aman
 type LanguageCode = keyof typeof languageHero;
 
 export const HeroParallax = ({
