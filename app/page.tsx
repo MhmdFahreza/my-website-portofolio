@@ -49,6 +49,46 @@ const getDataExperience = (selectedLanguage: LanguageCode) => {
 
   const dataExperience = [
     {
+      title: "2025",
+      content: (
+        <div>
+          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            {exp.magang}
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="./asset/Magang1.png"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="./asset/Magang2.png"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="./asset/Magang3.png"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="./asset/Magang4.png"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
       title: "2024",
       content: (
         <div>
@@ -89,7 +129,7 @@ const getDataExperience = (selectedLanguage: LanguageCode) => {
       ),
     },
     {
-      title: "2022",
+      title: "2022-2026",
       content: (
         <div>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
@@ -100,7 +140,7 @@ const getDataExperience = (selectedLanguage: LanguageCode) => {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
-              src="http://biaya-kuliah.com/wp-content/uploads/2023/04/iti.jpg"
+              src="/asset/Fotowisuda.png"
               alt="hero template"
               width={500}
               height={500}
@@ -152,7 +192,7 @@ const getDataExperience = (selectedLanguage: LanguageCode) => {
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
             <img
-              src="http://dtangsel.sch.id/wp-content/uploads/2023/02/Salah-Satu-SMA-Negeri-di-tangsel.png"
+              src="/asset/sma12.jpg"
               alt="feature template"
               width={500}
               height={500}
@@ -249,7 +289,7 @@ export default function Home() {
     { name: currentNav.tools, link: "#tools" },
     {
       name: currentNav.downloadCV,
-      link: "https://drive.google.com/uc?export=download&id=1_mM9mHA-JX31XXbh26uZ06StoFB1MDzV"
+      link: "https://drive.google.com/file/d/1yxWz8V7Mq6hF3AbrCbKcRB3rsCl4hXz9/view?usp=sharing"
     },
   ];
 

@@ -150,6 +150,10 @@ export const languageTimeline = {
 
 export const languageExperience = {
   US: {
+    // 2025 — Internship at Nano Center Indonesia
+    magang:
+      "I completed an internship at Nano Center Indonesia, under the auspices of the Yayasan Pusat Penelitian dan Pengembangan Nanoteknologi (YP3NI), one of Indonesia's leading research institutions. The internship ran from September to December 2025, providing me with valuable hands-on experience in a professional environment.",
+    // 2024 — Bangkit Academy
     bangkit:
       "I am a student currently participating in the Independent Study Program at Bangkit Academy, specializing in the Android Learning Path. This program allows me to improve my skills and gain hands-on experience in Android development while preparing for a professional career as an Android Developer.",
     itiShort: "I am currently studying at the Indonesian Institute of Technology.",
@@ -160,6 +164,10 @@ export const languageExperience = {
       "Active in school organizations such as joining the MPK/OSIS organization at school, which also sparked my interest in learning about the world of programming.",
   },
   ID: {
+    // 2025 — Magang di Nano Center Indonesia
+    magang:
+      "Saya telah menyelesaikan program magang di Nano Center Indonesia, di bawah naungan mitra Yayasan Pusat Penelitian dan Pengembangan Nanoteknologi (YP3NI), salah satu lembaga riset ternama di Indonesia. Magang ini berlangsung dari September hingga Desember 2025, memberikan saya pengalaman langsung yang berharga di lingkungan kerja profesional.",
+    // 2024 — Bangkit Academy
     bangkit:
       "Saya adalah mahasiswa yang saat ini mengikuti Program Studi Independen di Bangkit Academy dengan spesialisasi di Jalur Pembelajaran Android. Program ini memungkinkan saya untuk meningkatkan keterampilan dan mendapatkan pengalaman langsung dalam pengembangan Android serta mempersiapkan diri untuk karier profesional sebagai Pengembang Android.",
     itiShort: "Saya saat ini sedang menempuh pendidikan di Institut Teknologi Indonesia.",
@@ -170,6 +178,10 @@ export const languageExperience = {
       "Aktif dalam organisasi sekolah seperti bergabung dengan organisasi MPK/OSIS di sekolah, yang juga memicu minat saya untuk belajar tentang dunia pemrograman.",
   },
   JP: {
+    // 2025 — Nano Center Indonesia でのインターンシップ
+    magang:
+      "私はインドネシアの著名な研究機関であるナノセンターインドネシア（Nano Center Indonesia）でインターンシップを修了しました。同機関はYayasan Pusat Penelitian dan Pengembangan Nanoteknologi（YP3NI）の傘下にあります。このインターンシップは2025年9月から12月まで実施され、専門的な職場環境での実践的な経験を積むことができました。",
+    // 2024 — Bangkit Academy
     bangkit:
       "私は現在、Bangkitアカデミーの独立学習プログラムに参加しており、Android学習パスを専門としています。このプログラムを通じて、Android開発のスキルを向上させ、実践的な経験を積みながら、Android開発者としてのプロのキャリアを目指しています。",
     itiShort: "私は現在、インドネシア技術大学で学んでいます。",
@@ -180,6 +192,10 @@ export const languageExperience = {
       "学校のMPK/OSISなどの組織に積極的に参加し、それがプログラミングの世界への興味を引き起こしました。",
   },
   KR: {
+    // 2025 — Nano Center Indonesia 인턴십
+    magang:
+      "저는 인도네시아의 유명 연구 기관 중 하나인 Nano Center Indonesia에서 인턴십을 마쳤으며, 해당 기관은 Yayasan Pusat Penelitian dan Pengembangan Nanoteknologi (YP3NI)의 산하 기관입니다. 인턴십은 2025년 9월부터 12월까지 진행되었으며, 전문적인 업무 환경에서 실질적인 경험을 쌓을 수 있었습니다.",
+    // 2024 — Bangkit Academy
     bangkit:
       "저는 현재 Bangkit 아카데미의 독립 학습 프로그램에 참여하고 있으며, Android 학습 경로를 전공하고 있습니다. 이 프로그램을 통해 Android 개발 기술을 향상시키고 실무 경험을 쌓으며, Android 개발자로서의 전문 경력을 준비하고 있습니다.",
     itiShort: "저는 현재 인도네시아 기술 대학교에서 공부하고 있습니다.",
@@ -190,6 +206,10 @@ export const languageExperience = {
       "학교의 MPK/OSIS 조직 활동에 참여하면서 프로그래밍 세계에 대한 흥미를 갖게 되었습니다.",
   },
   CN: {
+    // 2025 — Nano Center Indonesia 实习
+    magang:
+      "我已完成在印度尼西亚知名研究机构 Nano Center Indonesia 的实习，该机构隶属于 Yayasan Pusat Penelitian dan Pengembangan Nanoteknologi（YP3NI）。此次实习于2025年9月至12月期间进行，为我提供了在专业工作环境中宝贵的实践经验。",
+    // 2024 — Bangkit Academy
     bangkit:
       "我目前是 Bangkit Academy 独立学习项目的学生，专注于 Android 学习路径。该项目帮助我提升技能、获得 Android 开发的实践经验，并为未来成为一名专业的 Android 开发者做准备。",
     itiShort: "我目前在印度尼西亚技术学院学习。",
