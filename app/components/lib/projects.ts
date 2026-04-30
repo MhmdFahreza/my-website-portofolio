@@ -45,8 +45,8 @@ export const projects = [
     thumbnail: "/asset/Projects/Formdatabeasiswa.png",
   },
   {
-    title: "My Portofolio",
-    link: "https://github.com/MhmdFahreza/my-website-portofolio",
-    thumbnail: "/asset/Projects/MyPortofolio.png",
+    title: "MARIJASA",
+    link: "https://github.com/MhmdFahreza/marijasa",
+    thumbnail: "/asset/Projects/marijasa.png",
   },
 ];
